@@ -1,22 +1,13 @@
-import { View, Image, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 import { DrawerToggleButton } from "@react-navigation/drawer";
 import { DrawerSceneWrapper } from "../components/drawer-scene-wrapper";
 
-export default function Index() {
+export default function Notifications() {
   return (
     <DrawerSceneWrapper>
       <View style={styles.container}>
         <View style={styles.header}>
-          <Image
-            source={{ uri: "https://github.com/pedrogiampietro.png" }}
-            style={styles.img}
-          />
-
-          <View style={styles.user}>
-            <Text style={styles.hi}>Olá,</Text>
-            <Text style={styles.username}>Pedro Giampietro</Text>
-          </View>
-
+          <Text style={styles.username}>Notificações</Text>
           <DrawerToggleButton />
         </View>
       </View>
@@ -36,19 +27,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 7,
   },
-  img: {
-    width: 50,
-    height: 50,
-    borderRadius: 12,
-  },
-  user: {
-    flex: 1,
-    justifyContent: "center",
-  },
-  hi: {
-    fontSize: 14,
-  },
   username: {
+    flex: 1,
     fontSize: 16,
     fontWeight: 700,
   },
